@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Random Numbers Project</title>
+    <style>
+        body{
+            color: pink;
+            background-color: blueviolet;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        h2{
+            padding: 60px;
+            color: violet;
+            background-color: pink;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Random Numbers Project</h2>
+    <div id="alba"></div>
+
+    <script>
+        let queen = document.getElementById("alba");
+
+        queen.innerHTML += "<strong>Random Set of Numbers:</strong><br>";
+        for (let i = 0; i < 5; i++) {
+            let randomNum = Math.floor(Math.random() * 100);
+            queen.innerHTML += randomNum + "<br>";
+        }
+
+        let currentDate = new Date();
+        queen.innerHTML += "<br><strong>Current Date:</strong><br>" + currentDate.toDateString() + "<br>";
+
+        let randomFloat = Math.random() * 10;
+        let roundedNum = Math.round(randomFloat);
+        queen.innerHTML += "<br><strong>Rounded Random Number:</strong><br>" + roundedNum;
+    </script>
+</body>
+
+</html>
